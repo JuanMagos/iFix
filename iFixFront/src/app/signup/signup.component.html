@@ -8,3 +8,16 @@
 <br>
 <button (click)="signUp()" *ngIf="newUser.password === newUser.password2">Registrarse</button>
 <button *ngIf="newUser.password !== newUser.password2" disabled>Registrarse</button>
+<br>
+<div *ngIf="reparar">
+  <h1>hola necesito reparación</h1>
+</div>
+
+<div *ngIf="reparo">
+  <form>
+    in
+  </form>
+  <h1>Te ayudo a reparar</h1>
+</div>
+<button (click)="selectReparar()">Necesito reparación</button>
+<button (click)="selectReparo()">Quiero reparar</button>

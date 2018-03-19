@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 export class SessionService {
 
   constructor(private http: Http) { }
-  BASE_URL = 'http://localhost:3000/api/auth';
+  BASE_URL = 'http://localhost:3000/user';
 
   signUp(user) {
     return this.http.post(`${this.BASE_URL}/signup`, user)
@@ -19,4 +19,16 @@ export class SessionService {
       return Observable.throw(e);
     });
   }
+
+  login(user) {
+  return this.http.post(`${this.BASE_URL}/login`, user, {withCredentials: true})
+  .map(res => res.json())
+  .map(users => {
+    localStorage.setItem('user', JSON.stringify(user));
+    return user;
+  })
+  .catch(e => {
+    return Observable.throw(e);
+});
+}
 }

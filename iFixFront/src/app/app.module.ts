@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 import {SessionService} from './services/session.service';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes = [
   {path: '', component: AppComponent},
@@ -21,7 +22,8 @@ const routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  reparar = false;
+  reparo  = false;
 
   constructor(
     private service: SessionService,
@@ -20,6 +22,15 @@ export class SignupComponent implements OnInit {
     .subscribe(user => {
       this.router.navigate(['login']);
     });
+  }
+
+  selectReparo() {
+    this.reparo = true;
+    this.reparar = false;
+  }
+  selectReparar() {
+    this.reparo = false;
+    this.reparar = true;
   }
 
   ngOnInit() {
