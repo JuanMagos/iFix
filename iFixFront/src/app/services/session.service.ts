@@ -3,13 +3,14 @@ import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class SessionService {
 
   constructor(private http: Http) { }
-  BASE_URL = 'http://localhost:3000/user';
+  BASE_URL = environment.baseURL;
 
   signUp(user) {
     return this.http.post(`${this.BASE_URL}/signup`, user)
