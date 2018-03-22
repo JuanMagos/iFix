@@ -10,9 +10,10 @@ import { Observable } from 'rxjs/Observable';
 export class SessionService {
 
   constructor(private http: Http) { }
-  BASE_URL = environment.baseURL;
+  BASE_URL = 'http://localhost:3000/user';
 
   signUp(user) {
+    console.log(this.BASE_URL);
     return this.http.post(`${this.BASE_URL}/signup`, user)
     .map(res => res.json())
     .catch(e => {
@@ -22,6 +23,7 @@ export class SessionService {
   }
 
   login(user) {
+    console.log("user")
   return this.http.post(`${this.BASE_URL}/login`, user, {withCredentials: true})
   .map(res => res.json())
   .map(users => {

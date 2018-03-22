@@ -18,7 +18,7 @@
     <input [(ngModel)]="newUser.password" id="password" type="password" class="form-control" name="password" placeholder="Password">
     <br>
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input [(ngModel)]="newUser.password2" id="password" type="password" class="form-control" name="password2" placeholder="Confirm password">
+    <input [(ngModel)]="newUser.password2" id="password2" type="password" class="form-control" name="password2" placeholder="Confirm password">
     <br>
     <div id="registro">
       <button class="btn btn-primary btn-lg btn-block" (click)="signUp()" *ngIf="newUser.password === newUser.password2">Registrarse</button>

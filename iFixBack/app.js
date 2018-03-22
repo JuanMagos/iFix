@@ -17,11 +17,17 @@ var servicios = require('./routes/servicios')
 
 
 var app = express();
-app.use(require("cors")());
+
+var cors = require ("cors")
+var corsOptions = {
+  origin: true,
+  credentials: true
+};
+app.use(cors(corsOptions));
 
 
-mongoose.connect(process.env.mongoURL)
-.then(console.log(`Connected to ${process.env.mongoURL}`))
+mongoose.connect("mongodb://localhost/ifix")
+.then(console.log(`Connected to DB!!`))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
