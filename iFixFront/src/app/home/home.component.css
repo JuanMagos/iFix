@@ -1,7 +1,29 @@
 .all{
     display: flex;
     position: relative;
-    background-image: url("http://localhost:3000/images/sec01_background.jpg");
-    height: 800px;
+    height: 574px;
     justify-content: center
 }   
+
+.homeimage{
+    position: absolute;
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    background-image: url("http://localhost:3000/images/happy2.jpg");
+    width: 100%;
+    height: 575px;
+    filter: brightness(70%);
+    
+}
+
+.text
+{
+    color: floralwhite;
+}
+
+.card{
+    background-image: url("http://localhost:3000/images/sec01_background.jpg");
+    height: 350px;
+}
+

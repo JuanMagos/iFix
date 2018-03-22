@@ -1,6 +1,6 @@
 .padre{
     position: relative;
-    background-image: url("http://localhost:3000/images/fondo2.png");
+    background-image: url("http://localhost:3000/images/fondo3.png");
     background-size: 150px 150px;
     height: 150px;
     margin-bottom: 0%
@@ -13,11 +13,23 @@
     padding-left: 250px;
     padding-bottom: -20px
 }
-h1{
-    font-size: 150px;
-    color: rgb(7, 7, 7);
+
+.navbar{
+    background-color: rgba(66, 72, 73, 0);
+    color: white;
+    margin-bottom: -70px;
+    z-index: 1;
+    font-size: 150%
 }
 
-.navbr{
-    padding-top: -25
+h2{
+    font-size: 40px
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+li{
+    margin-right: 100px
 }
