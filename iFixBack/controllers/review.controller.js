@@ -14,7 +14,7 @@ exports.getReviews = function(req, res, next) {
     .catch(e=>res.status(500).send(e));
   }
 
-  exports.postCard = (req, res, next)=>{
+  exports.postReview = (req, res, next)=>{
     const newReview = new Review({
       title: req.body.title,
       list: req.body.list

@@ -1,0 +1,22 @@
+.all{
+    display: flex;
+    position: relative;
+    background-image: url("http://localhost:3000/images/sec01_background.jpg");
+    height: 800px;
+    justify-content: center
+}
+.container{
+    height: 500px;
+    position: absolute;
+    background-color: white;
+    margin-top: 70px;
+    width: 500px;
+}
+
+#registro{
+    padding-top: 50px
+}
+
+.custom-select{
+    margin-bottom: 20px
+}

@@ -2,9 +2,8 @@ var express = require('express');
 var router = express.Router();
 const controller = require("../controllers/review.controller");
 
-router.get('/', controller.getCards);
-router.post('/', controller.postCard);
-router.patch('/:id', controller.patchCard);
-router.delete('/:id', controller.deleteCard);
+router.get('/review/', controller.getReviews);
+router.post('/review/', controller.postReview);
+router.patch('/review/:id', controller.patchReview);
 
 module.exports = router;

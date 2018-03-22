@@ -24,15 +24,6 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  selectReparo() {
-    this.reparo = true;
-    this.reparar = false;
-  }
-  selectReparar() {
-    this.reparo = false;
-    this.reparar = true;
-  }
-
   ngOnInit() {
   }
 

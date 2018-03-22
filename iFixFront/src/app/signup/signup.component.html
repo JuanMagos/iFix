@@ -1,23 +1,29 @@
-<input [(ngModel)]="newUser.name" type="text" placeholder="Nombre">
-<br>
-<input [(ngModel)]="newUser.email" type="text" placeholder="Correo">
-<br>
-<input [(ngModel)]="newUser.password" type="password" placeholder="Contraseña">
-<br>
-<input [(ngModel)]="newUser.password2" type="password" placeholder="Confirma contraseña">
-<br>
-<button (click)="signUp()" *ngIf="newUser.password === newUser.password2">Registrarse</button>
-<button *ngIf="newUser.password !== newUser.password2" disabled>Registrarse</button>
-<br>
-<div *ngIf="reparar">
-  <h1>hola necesito reparación</h1>
+<div class="all">
+  <div class="container">
+    <br>
+    <select class="custom-select" data-style="btn-success" [(ngModel)]="newUser.option" name="options" id="inputGroupSelect01">
+    <option hidden >Display but don't show in list</option>
+    <option value="tecnico">Tecnico</option>
+    <option value="cliente">Cliente</option>
+    </select> 
+    <br>
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input [(ngModel)]="newUser.name" id="name" type="text" class="form-control" name="name" placeholder="Name">
+    <!-- <input *ngIf="newUser.option=='tecnico'" [(ngModel)]="newUser.name" id="name" type="text" class="form-control" name="name" placeholder="Name"> -->
+    <br>
+    <span class="glyphicon glyphicon-user"></span>
+    <input [(ngModel)]="newUser.email" id="email" type="text" class="form-control" name="email" placeholder="Email">
+    <br>
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input [(ngModel)]="newUser.password" id="password" type="password" class="form-control" name="password" placeholder="Password">
+    <br>
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input [(ngModel)]="newUser.password2" id="password" type="password" class="form-control" name="password2" placeholder="Confirm password">
+    <br>
+    <div id="registro">
+      <button class="btn btn-primary btn-lg btn-block" (click)="signUp()" *ngIf="newUser.password === newUser.password2">Registrarse</button>
+      <button class="btn btn-primary btn-lg btn-block" *ngIf="newUser.password !== newUser.password2" disabled>Registrarse</button>
+      <br>
+    </div>
+  </div>
 </div>
-
-<div *ngIf="reparo">
-  <form>
-    in
-  </form>
-  <h1>Te ayudo a reparar</h1>
-</div>
-<button (click)="selectReparar()">Necesito reparación</button>
-<button (click)="selectReparo()">Quiero reparar</button>

@@ -1,14 +1,18 @@
 
 const mongoose = require("mongoose");
 
-cardSchema = new mongoose.Schema({
+reviewSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true
     },
     description:String,
     rating:Number,
-    user: {
+    from: {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    },
+    to: {
         type:mongoose.Schema.Types.ObjectId,
         ref:"User"
     }
@@ -19,4 +23,4 @@ cardSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("Card", cardSchema);
+module.exports = mongoose.model("Review", reviewSchema);

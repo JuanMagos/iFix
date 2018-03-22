@@ -1,0 +1,23 @@
+.padre{
+    position: relative;
+    background-image: url("http://localhost:3000/images/fondo2.png");
+    background-size: 150px 150px;
+    height: 150px;
+    margin-bottom: 0%
+}
+
+.marca{
+    position:relative;
+    display: flex;
+    align-items: center;
+    padding-left: 250px;
+    padding-bottom: -20px
+}
+h1{
+    font-size: 150px;
+    color: rgb(7, 7, 7);
+}
+
+.navbr{
+    padding-top: -25
+}
